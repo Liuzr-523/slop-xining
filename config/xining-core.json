@@ -32,8 +32,11 @@
     "id": "qinghai-grand-theatre",
     "name": "青海大剧院",
     "type": "grand-theatre",
-    "lon": 101.7172,
-    "lat": 36.6458,
+    "lon": 101.71678,
+    "lat": 36.64562,
+    "synthetic": true,
+    "footprintW": 64,
+    "footprintD": 56,
     "height": 36,
     "heightSource": "visual-estimate",
     "aliases": [

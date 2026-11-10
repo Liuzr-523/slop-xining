@@ -103,7 +103,7 @@ def main():
     landmark_source=next((b for b in raw['buildings'] if b['name']=='江汉关大楼'),None)
     if XN:
         spec=profile['primaryLandmark'];px,pz=project(spec['lon'],spec['lat']);near=[b for b in raw['buildings'] if geometry(b['polygons']).distance(Point(px,pz))<80]
-        landmark_source=max(near,key=lambda b:geometry(b['polygons']).area) if near else {'id':'synthetic-'+spec['id'],'polygons':polygons(Point(px,pz).buffer(38,quad_segs=6))}
+        landmark_source=max(near,key=lambda b:geometry(b['polygons']).area) if near and not spec.get('synthetic') else {'id':'synthetic-'+spec['id'],'polygons':polygons(box(px-spec.get('footprintW',76)/2,pz-spec.get('footprintD',76)/2,px+spec.get('footprintW',76)/2,pz+spec.get('footprintD',76)/2) if spec.get('synthetic') else Point(px,pz).buffer(38,quad_segs=6))}
     if landmark_source is None:raise SystemExit('This profile must include the Jianghanguan pilot landmark; configure a separate landmark adapter for another area.')
     landmark_poly=geometry(landmark_source['polygons'])
     landmark_rr=landmark_poly.minimum_rotated_rectangle
@@ -311,8 +311,10 @@ def main():
     OUT.mkdir(parents=True,exist_ok=True)
     for p in stage.iterdir():
         target=OUT/p.name
-        if target.is_dir():shutil.rmtree(target)
-        os.replace(p,target)
-    stage.rmdir();print(json.dumps(report,ensure_ascii=False,indent=2))
+        if p.is_dir():shutil.copytree(p,target,dirs_exist_ok=True)
+        else:shutil.copyfile(p,target)
+    try:stage.rmdir()
+    except OSError:pass
+    print(json.dumps(report,ensure_ascii=False,indent=2))
 
 if __name__=='__main__':main()

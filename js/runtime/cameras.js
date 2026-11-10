@@ -21,7 +21,7 @@ const CAMERA_PRESETS = [
   {id:'drone',name:'海湖新区空中环游',short:'环游',category:'scenic',fov:50}
 ];
 const WUHAN_VIEWS = {
- 'grand-theatre':{position:[323, 70, 116],target:[63, 18, -144]},
+ 'grand-theatre':{position:[285, 70, 136],target:[25, 18, -124]},
  'tangdao':{position:[111, 14, 382],target:[-9, 10, 222]},
  'haihu-skyline':{position:[-933, 180, 850],target:[-83, 40, 120]},
  'sports':{position:[-1367, 120, -366],target:[-1717, 10, -666]},
