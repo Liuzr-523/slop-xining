@@ -1457,3 +1457,4 @@ body.touch-enabled .pop-item { min-height: 44px; }
 .core-destinations button:hover,.core-destinations button:focus-visible { color:#ffe28a;background:rgba(255,198,26,.08); }
 .core-destinations button:focus-visible { outline:2px solid #ffc61a;outline-offset:-2px; }
 @media(max-width:800px){.core-destinations{top:104px;left:var(--edge);width:min(248px,calc(100% - 2 * var(--edge)));max-height:46vh;padding:13px;}.core-destinations:not([open]){width:164px;}}
+@media(max-width:700px){.data-credit{top:auto;bottom:3px;font-size:10px}}
