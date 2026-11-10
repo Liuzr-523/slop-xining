@@ -20,7 +20,7 @@ const $=id=>document.getElementById(id),boot=window.shanghaiStartup,start=boot?.
 const bootMarks=[];function status(text){$('loading-text').textContent=text;bootMarks.push({text,ms:performance.now()-start});}
 function toast(text){$('toast').textContent=text;$('toast').hidden=false;clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('toast').hidden=true,3500);}
 async function init(){
- status('读取汉口试验区道路与城市块…');
+ status('读取西宁道路与城市块…');
  const [data,manifest,metro]=boot?.data?[boot.data.city,boot.data.manifest,boot.data.metro]:await Promise.all(['./data/city.json','./data/manifest.json','./data/metro.json'].map(async u=>{const r=await fetch(u);if(!r.ok)throw Error('城市数据加载失败');return r.json();}));
  data.metroStations=metro.stations;
  status('准备天空、光线和材质…');boot?.progress.begin('engine',2,'正在连接图形设备…');await nextPaint();
@@ -28,7 +28,7 @@ async function init(){
  renderer.setPixelRatio(1);renderer.setSize(innerWidth,innerHeight);renderer.shadowMap.enabled=true;$('scene').append(renderer.domElement);await renderer.init();
  boot?.progress.update('engine',1,2,'图形设备已连接');await nextPaint();const scene=new THREE.Scene(),lighting=new LightingSystem(scene,renderer);lighting.sunLight.shadow.mapSize.set(2048,2048);lighting.sky.scale.setScalar(600000);
  const surface=new SurfaceProvider([...data.roads,...data.tunnels],data.water,data.rampCuts),world=new CollisionWorld();
- boot?.progress.complete('engine');boot?.progress.begin('scene',8,'正在构建武汉天际线与街道…');await nextPaint();
+ boot?.progress.complete('engine');boot?.progress.begin('scene',8,'正在构建西宁天际线与街道…');await nextPaint();
  const city=await createCityScene(scene,data,world,surface,async(done,label)=>{boot?.progress.update('scene',done,8,label);await nextPaint();}),traffic=createShanghaiTraffic(scene,data.schemaVersion>=3?[]:data.roads,data.rampCuts);
  const controllers=new ThirdPersonControllerManager(scene,[]);controllers.surfaceProvider=surface;controllers.worldBounds=data.bounds;
  controllers.nearColliders=(x,z,r)=>world.query({minX:x-r,maxX:x+r,minY:controllers.getActiveEntity().position.y-1,maxY:controllers.getActiveEntity().position.y+3,minZ:z-r,maxZ:z+r});
@@ -36,7 +36,7 @@ async function init(){
  let startupTiles=new Set(),startupReady=new Set();
  const loader=new TileLoader(manifest,async(t,signal)=>{if(t.inline){const b=t.bounds;return {id:t.id,buildings:[],roads:[],land:[],parks:[],shoulders:[],water:t.inline==='water'?[[[[b[0],b[1]],[b[2],b[1]],[b[2],b[3]],[b[0],b[3]],[b[0],b[1]]]]]:[]};}if(boot&&!boot.progress.ready){const bytes=await fetchTrackedBytes(t.url,{signal,expectedBytes:t.bytes,onProgress:p=>boot.progress.update('tiles',startupReady.size,startupTiles.size,`街区 ${t.id} · 已读取 ${Math.round(p.loaded/1000)} / ${Math.round(p.total/1000)} KB`)});const tile=JSON.parse(new TextDecoder().decode(bytes));await nextPaint();return tile;}const r=await fetch(t.url,{signal});if(!r.ok)throw Error('街区暂时未能加载');return r.json();},(tile,meta)=>{const handle=city.mountTile(tile,meta);if(startupTiles.has(meta.id)){startupReady.add(meta.id);boot?.progress.update('tiles',startupReady.size,startupTiles.size,`出发街区 ${startupReady.size} / ${startupTiles.size} 已就绪`);}return handle;});
  const rootRoad=surface.nearest(data.spawn.x,data.spawn.z,r=>r.mode==='car'&&!r.tunnel);
- if(!rootRoad)throw Error('武汉数据没有可用出发道路');
+ if(!rootRoad)throw Error('西宁数据没有可用出发道路');
  const spawn={x:rootRoad.x,z:rootRoad.z,y:2.12};
  for(const [i,e]of Object.values(controllers.entities).entries()){e.position.set(spawn.x+i*4,2.12,spawn.z);e.heading=data.spawn.heading||0;e.mesh.rotation.order='YXZ';}
  controllers.entities.car.position.set(spawn.x,2.12,spawn.z);controllers.entities.helicopter.position.y=110;
@@ -95,9 +95,9 @@ async function init(){
  document.addEventListener('keydown',e=>{if(e.code==='Escape'){$('map-modal').hidden=true;$('places').hidden=true;$('search').blur();document.body.classList.remove('clean');return;}if(/INPUT|TEXTAREA|SELECT/.test(e.target.tagName))return;const modes=['person','car','cyclist','helicopter'];if(/^[1-4]$/.test(e.key))setMode(modes[+e.key-1]);if(e.code==='KeyM')toggleMap();if(e.code==='KeyV')cycleCamera();});
  addEventListener('resize',()=>{renderer.setSize(innerWidth,innerHeight);cameras.onResize(innerWidth,innerHeight);});
  const views=[
-  {name:'汉口试验区俯瞰',position:[0,1500,1000],target:[0,0,0]},
-  {name:'江汉关钟楼近景',position:[data.landmarks[0].x+32,24,data.landmarks[0].z-67],target:[data.landmarks[0].x,24,data.landmarks[0].z]},
-  {name:'江汉路望江汉关',position:[-187.747,7,632.529],target:[data.landmarks[0].x,20,data.landmarks[0].z]},
+  {name:'海湖新区俯瞰',position:[0,1500,1000],target:[0,0,0]},
+  {name:'大剧院近景',position:[data.landmarks[0].x+32,24,data.landmarks[0].z-67],target:[data.landmarks[0].x,24,data.landmarks[0].z]},
+  {name:'海湖广场远望',position:[-187.747,7,632.529],target:[data.landmarks[0].x,20,data.landmarks[0].z]},
   {name:'沿江大道出发点',position:[spawn.x-45,28,spawn.z+55],target:[spawn.x,5,spawn.z]},
  ];
  const app={data,manifest,renderer,scene,lighting,controllers,cameras,surface,world,loader,city,traffic,map,views,bootMarks,samples,errors,longTasks,teleport,gotoLandmark,setMode,setTime,
@@ -134,7 +134,7 @@ async function init(){
  renderer.setRenderTarget(scenePass.renderTarget);renderer.setMRT(scenePass.getMRT());
  try{await renderer.compileAsync(scene,camera,null,event=>boot?.progress.update('render',event.loaded,event.total+1,`光影材质 ${event.loaded} / ${event.total} 已准备`));}finally{renderer.setRenderTarget(previousTarget);renderer.setMRT(previousMRT);}
  for(let i=0;i<3;i++){pipeline.render();if(renderer.backend.device?.queue)await renderer.backend.device.queue.onSubmittedWorkDone();await nextPaint();}
- ready=true;app.bootMs=performance.now()-start;if(boot){bootMarks.unshift(...boot.marks);await boot.finish();}else $('loading').hidden=true;toast('欢迎来到武汉 · W A S D 自由漫游');last=performance.now();
+ ready=true;app.bootMs=performance.now()-start;if(boot){bootMarks.unshift(...boot.marks);await boot.finish();}else $('loading').hidden=true;toast('欢迎来到西宁 · W A S D 自由漫游');last=performance.now();
  renderer.setAnimationLoop(()=>{
   const now=performance.now(),ms=now-last;last=now;const dt=Math.min(.06,ms/1000);elapsed+=dt;frame++;
   if(ready&&!document.hidden){samples.push(ms);if(samples.length>maxSamples)samples.splice(0,1000);}
@@ -144,9 +144,9 @@ async function init(){
   city.update(elapsed,camera);if(traffic.streetRevision!==city.streetRevision&&data.schemaVersion>=3){traffic.setRoads([...city.streetTiles.values()].flatMap(t=>t.roads));traffic.streetRevision=city.streetRevision;}traffic.update(dt,e.position,camera.position);
   if(frame%30===0)loader.update(e.position,controllers.activeMode);
   if(now-lastHud>250){
-   lastHud=now;const mode=controllers.activeMode;const names={person:'滨江步行',car:'武汉出租车',cyclist:'城市骑行',helicopter:'长江观光直升机'};
+   lastHud=now;const mode=controllers.activeMode;const names={person:'滨江步行',car:'西宁出租车',cyclist:'城市骑行',helicopter:'城市观光直升机'};
    $('mode-label').textContent=names[mode];$('speed').textContent=Math.round(Math.abs(e.speed)*3.6);$('speed-meter').style.width=Math.min(100,Math.abs(e.speed)*3.6)+'%';$('fps').textContent=Math.round(1000/ms)+' fps';$('altitude').textContent=mode==='helicopter'?Math.round(e.position.y)+' m':e.surface?.tunnel?'隧道内':'';
-   const near=surface.nearest(e.position.x,e.position.z,r=>!!r.name&&!r.tunnel);$('road-label').textContent=e.surface?.tunnel?'未开放隧道':near?.distance<500?near.road.name:surface.isWater(e.position.x,e.position.z)?'武汉水域':'武汉街区';
+   const near=surface.nearest(e.position.x,e.position.z,r=>!!r.name&&!r.tunnel);$('road-label').textContent=e.surface?.tunnel?'未开放隧道':near?.distance<500?near.road.name:surface.isWater(e.position.x,e.position.z)?'西宁水域':'西宁街区';
    $('controls-hint').innerHTML=mode==='helicopter'?'<kbd>W</kbd><kbd>S</kbd> 俯仰　<kbd>A</kbd><kbd>D</kbd> 偏航　<kbd>E</kbd> 上升　<kbd>Q</kbd> 下降　拖动环视':'<kbd>W</kbd><kbd>S</kbd> 前进 / 后退　<kbd>A</kbd><kbd>D</kbd> 转向　<kbd>Shift</kbd> 加速　拖动环视';map.update(e.position,e.heading);
   }
   pipeline.render();

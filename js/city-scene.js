@@ -84,8 +84,8 @@ export async function createCityScene(scene,data,collisionWorld,surfaceProvider=
   // Portal signs at both banks. Inner lighting is completed by the player's headlights.
   for(const p of [t.points[0],t.points.at(-1)]){const sign=makeSign('未开放隧道  →',0x155658);sign.position.set(p[0],7.6,p[2]);g.add(sign);}
  }
- await onProgress(2,'跨江隧道已构建');
- const landmarkSystem=buildWuhanLandmarks(scene,data.landmarks);buildWuhanStreetscape(scene,data,placement);await onProgress(3,'江汉关与江汉路街景已构建');
+ await onProgress(2,'隧道已构建');
+ const landmarkSystem=buildWuhanLandmarks(scene,data.landmarks);buildWuhanStreetscape(scene,data,placement);await onProgress(3,'街景已构建');
  const buildingMaterials=createBuildingMaterials(),styles=buildingMaterials.walls;
  const footprintRoof=buildingMaterials.roofs[7];
  const overview=new Map(),loaded=new Map();

@@ -58,11 +58,11 @@ function createTaxiDoorDecalTexture() {
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
   ctx.fillText('T', 58, 66);
-  // WUHAN TAXI typography & Fare Rate
+  // XINING TAXI typography & Fare Rate
   ctx.fillStyle = '#111317';
   ctx.textAlign = 'left';
   ctx.font = '900 26px Inter, Arial, sans-serif';
-  ctx.fillText('WUHAN TAXI', 112, 42);
+  ctx.fillText('XINING TAXI', 112, 42);
   ctx.font = '700 15px JetBrains Mono, monospace';
   ctx.fillText('7Y48 · MEDALLION', 112, 68);
   ctx.font = '600 13px Inter, Arial, sans-serif';
@@ -84,12 +84,12 @@ function createNYLicensePlateTexture() {
   ctx.fillStyle = '#ffb81c';
   ctx.font = '800 15px Inter, Arial, sans-serif';
   ctx.textAlign = 'center';
-  ctx.fillText('武汉', 128, 23);
+  ctx.fillText('西宁', 128, 23);
   ctx.fillStyle = '#0d2244';
   ctx.font = '900 48px JetBrains Mono, monospace';
   ctx.fillText('沪A·漫游', 128, 82);
   ctx.font = '700 13px Inter, Arial, sans-serif';
-  ctx.fillText('WUHAN 武汉出租', 128, 114);
+  ctx.fillText('XINING 西宁出租', 128, 114);
   const tex = new THREE.CanvasTexture(c);
   tex.colorSpace = THREE.SRGBColorSpace;
   return tex;
@@ -397,7 +397,7 @@ class ThirdPersonControllerManager {
     carBodyMesh.receiveShadow = true;
     chassisPivot.add(carBodyMesh);
 
-    // 2. Authentic WUHAN Taxi Side Door 武汉出租 Medallion & Fare Tariff Emblem Decals, hugging the curved front doors
+    // 2. Authentic WUHAN Taxi Side Door 西宁出租 Medallion & Fare Tariff Emblem Decals, hugging the curved front doors
     const doorDecalTex = createTaxiDoorDecalTexture();
     const doorDecalMat = new THREE.MeshStandardNodeMaterial({
       map: doorDecalTex,
@@ -469,7 +469,7 @@ class ThirdPersonControllerManager {
 
     return {
       type: 'car',
-      label: '武汉出租车',
+      label: '西宁出租车',
       mesh: root,
       chassisPivot,
       carState,

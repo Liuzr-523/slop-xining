@@ -787,7 +787,7 @@ async function initApp() {
       if (elAltitude) elAltitude.textContent = altM.toLocaleString('zh-CN');
       // The street corner of the player on the follow cameras, of the camera itself on the scenic ones
       const where = cameraSystem.getActivePreset().category === 'follow' ? activeEnt.position : cameraSystem.currentPos;
-      renderLocation(activeEnt.tunnelId?'武汉长江隧道':getLocationLabel(where.x, where.z));
+      renderLocation(activeEnt.tunnelId?'隧道':getLocationLabel(where.x, where.z));
     }
   });
 }

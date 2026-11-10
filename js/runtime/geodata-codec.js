@@ -2,9 +2,9 @@
 // strategy to Wuhan's richer schema. MIT upstream; see docs/LOADING_OPTIMIZATION.md.
 // Integer/millimetre encoding is used only when it reconstructs the exact Number.
 export function decodeGeodata(data){
- if(!(data instanceof Uint8Array)||data.length<5||String.fromCharCode(...data.subarray(0,4))!=='WUH1')throw Error('武汉地图数据格式错误');
+ if(!(data instanceof Uint8Array)||data.length<5||String.fromCharCode(...data.subarray(0,4))!=='WUH1')throw Error('西宁地图数据格式错误');
  const view=new DataView(data.buffer,data.byteOffset,data.byteLength),text=new TextDecoder('utf-8',{fatal:true});let cursor=4;
- const invalid=()=>{throw Error('武汉地图数据不完整或格式错误');};
+ const invalid=()=>{throw Error('西宁地图数据不完整或格式错误');};
  function uint(){let n=0;for(let i=0;i<5;i++){if(cursor>=data.length)invalid();const b=data[cursor++];if(i===4&&b>15)invalid();n+=(b&127)*2**(i*7);if(!(b&128))return n;}invalid();}
  const signed=()=>{const n=uint();return (n>>>1)^-(n&1);};
  const count=()=>{const n=uint();if(n>data.length-cursor)invalid();return n;};
@@ -32,6 +32,6 @@ export async function unpackGeodata(bytes,{decodedBytes}={}){
  const raw=bytes[0]===0x1f&&bytes[1]===0x8b
   ?new Uint8Array(await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer())
   :bytes;
- if(decodedBytes!==undefined&&raw.length!==decodedBytes)throw Error('武汉地图资源长度与版本不一致，请刷新重试');
+ if(decodedBytes!==undefined&&raw.length!==decodedBytes)throw Error('西宁地图资源长度与版本不一致，请刷新重试');
  return decodeGeodata(raw);
 }
