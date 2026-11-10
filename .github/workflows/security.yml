@@ -1,7 +1,8 @@
 name: Secret and privacy scan
 on:
-  push:
-  pull_request:
+  # 西宁版直接从 main 分支发布到 GitHub Pages；武汉版的构建与测试流程改为仅手动触发
+  workflow_dispatch:
+
 permissions:
   contents: read
 jobs:
