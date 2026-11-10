@@ -1,0 +1,14 @@
+{
+  "last_release": "2026-10-21.0",
+  "last_run": "2026-11-10T08:59:59.596866+00:00",
+  "theme": "buildings",
+  "type": "building",
+  "bbox": {
+    "xmin": 101.69,
+    "ymin": 36.612,
+    "xmax": 101.778,
+    "ymax": 36.658
+  },
+  "backend": "geojson",
+  "output": "data/source/overture-xining-buildings.geojson"
+}

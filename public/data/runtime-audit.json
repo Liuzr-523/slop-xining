@@ -1,0 +1,72 @@
+{
+  "runtimeBase": "shwang1979/slop-taipei",
+  "ruleVersion": "hankou-display-v1",
+  "sourceBuildings": 12531,
+  "renderedParts": 12531,
+  "roadLinks": 2238,
+  "curvedRoadLinks": 1138,
+  "crossings": 60,
+  "signals": 8,
+  "streetDetailRejected": {
+    "crossing_not_on_carriageway": 3
+  },
+  "heightSources": {
+    "visual-estimate:hankou-display-v1": 958,
+    "3D-GloBFP:model-estimate": 10233,
+    "OSM:levels": 14,
+    "CMAB:model-estimate": 1326
+  },
+  "signRecords": 21,
+  "verticalSignCandidates": 18,
+  "signTextSources": {
+    "generic:business-category": 19,
+    "OSM:POI": 1,
+    "OSM:building-name": 1
+  },
+  "signRejected": {
+    "poi_without_nearby_street_wall": 41,
+    "unsafe_horizontal_sign": 5,
+    "near_another_sign": 1
+  },
+  "tunnelBores": 0,
+  "tunnelLengthM": 0,
+  "tunnelProfile": "Estimated width, depth, clearance; source horizontal geometry and portal nodes",
+  "heritagePaving": {
+    "areaM2": 0.0,
+    "sourceRoadIds": [],
+    "reference": "https://sw.wuhan.gov.cn/xwdt/gzdt/202009/t20200929_1458374.shtml",
+    "dimensions": "Illustrative joint spacing and centre-strip width; source walkable geometry preserved"
+  },
+  "region": {
+    "id": "xining-haihu-qilinwan",
+    "name": "西宁·海湖新区—麒麟湾",
+    "boundsWgs84": [
+      101.69,
+      36.612,
+      101.778,
+      36.658
+    ],
+    "widthM": 7869.3,
+    "heightM": 5104.7,
+    "areaKm2": 40.17,
+    "scale": "1:1"
+  },
+  "hillTiles": 0,
+  "elevatedLinks": 0,
+  "terrainLinks": 0,
+  "limits": [
+    "Missing heights and 3D-GloBFP heights are estimates, not surveyed",
+    "No Taipei geography or landmarks imported",
+    "Only two masked ridges and three named crossings; deck engineering profiles estimated",
+    "Vehicle models and facade details adapted from Taipei; not exact Wuhan replicas"
+  ],
+  "sourceCitySha256": "88b866c4985cddd3d5310a699008b183aec83cee88fd1a99d9f7de0f9926af8c",
+  "runtimePackage": {
+    "format": "WUH1",
+    "rawBytes": 3837535,
+    "gzipBytes": 1951751,
+    "sha256": "57ba2cfb385f9597f7a8de193bc8e47c1ca345d8ea2573b17b0367a8b4caa4cb",
+    "precision": "lossless; coordinates and dimensions unchanged",
+    "auditData": "Full source attributes remain in public/data/city.json; placement uses only source outlines and road fields"
+  }
+}

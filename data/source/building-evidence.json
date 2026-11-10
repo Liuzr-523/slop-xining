@@ -1,0 +1,465 @@
+{
+  "schemaVersion": 1,
+  "records": [
+    {
+      "osmId": "osm-building-way-128398494",
+      "expectedName": "平安大厦",
+      "displayName": "佳丽广场（平安大厦）",
+      "totalHeightM": 251,
+      "heightMeaning": "architectural-total; not a surveyed roof elevation",
+      "storeys": 59,
+      "podiumStoreys": 8,
+      "use": "mixed-commercial-office",
+      "source": "https://www.jianghan.gov.cn/xwzx/mtbd/201808/t20180801_3416.shtml",
+      "publisher": "武汉市江汉区人民政府（转载长江日报）",
+      "published": "2018-08-01",
+      "massingRecipe": {
+        "type": "podium-tower",
+        "towerScale": 0.38,
+        "crownFraction": 0.06
+      },
+      "massingNote": "Podium height, tower position, setback footprint and crown proportions are visual estimates; total height is documented. The mapped footprint covers a complex, so it must not be extruded to 251m as one slab."
+    },
+    {
+      "osmId": "osm-building-way-1314771285",
+      "expectedName": "璇宫饭店（中心百货）",
+      "storeys": 5,
+      "use": "historic-commercial",
+      "source": "https://www.thepaper.cn/newsDetail_forward_13355836",
+      "publisher": "武汉消防（澎湃政务号）",
+      "published": "2021-06-28",
+      "heightMeaning": "documented historical main-block storeys; metric height remains a floor-height estimate; roof pavilion and later alterations not reconstructed"
+    },
+    {
+      "osmId": "osm-building-way-675137406",
+      "expectedName": "",
+      "displayName": "晴川饭店主楼",
+      "totalHeightM": 88.6,
+      "heightMeaning": "documented architectural total; applied to mapped tower part, not the two-storey podium",
+      "use": "hotel",
+      "facadeProfile": "qingchuan-hotel",
+      "source": "https://www.whzx.gov.cn/zxzl/wsl/whwszl/202407/P020240712324504922948.pdf",
+      "publisher": "武汉市政协·武汉文史资料2024年第6期",
+      "published": "2024-06"
+    },
+    {
+      "osmId": "osm-building-way-1018926851",
+      "expectedName": "",
+      "displayName": "积玉桥万达公馆住宅塔楼",
+      "storeys": 42,
+      "groupStoreysRange": [
+        42,
+        43
+      ],
+      "floorHeightEstimateM": 3.2,
+      "overrideHeight": true,
+      "use": "residential",
+      "facadeProfile": "riverfront-residential",
+      "heightMeaning": "published group range 42-43 floors; conservative 42-floor display estimate, exact per-tower count unverified",
+      "source": "https://www.prnasia.com/story/44290-1.shtml",
+      "publisher": "万达项目新闻稿·美通社",
+      "published": "2011-04-17"
+    },
+    {
+      "osmId": "osm-building-way-1018926852",
+      "expectedName": "",
+      "displayName": "积玉桥万达公馆住宅塔楼",
+      "storeys": 42,
+      "groupStoreysRange": [
+        42,
+        43
+      ],
+      "floorHeightEstimateM": 3.2,
+      "overrideHeight": true,
+      "use": "residential",
+      "facadeProfile": "riverfront-residential",
+      "heightMeaning": "published group range 42-43 floors; conservative 42-floor display estimate, exact per-tower count unverified",
+      "source": "https://www.prnasia.com/story/44290-1.shtml",
+      "publisher": "万达项目新闻稿·美通社",
+      "published": "2011-04-17"
+    },
+    {
+      "osmId": "osm-building-way-1018926854",
+      "expectedName": "",
+      "displayName": "积玉桥万达公馆住宅塔楼",
+      "storeys": 42,
+      "groupStoreysRange": [
+        42,
+        43
+      ],
+      "floorHeightEstimateM": 3.2,
+      "overrideHeight": true,
+      "use": "residential",
+      "facadeProfile": "riverfront-residential",
+      "heightMeaning": "published group range 42-43 floors; conservative 42-floor display estimate, exact per-tower count unverified",
+      "source": "https://www.prnasia.com/story/44290-1.shtml",
+      "publisher": "万达项目新闻稿·美通社",
+      "published": "2011-04-17"
+    },
+    {
+      "osmId": "osm-building-way-1018926855",
+      "expectedName": "",
+      "displayName": "积玉桥万达公馆住宅塔楼",
+      "storeys": 42,
+      "groupStoreysRange": [
+        42,
+        43
+      ],
+      "floorHeightEstimateM": 3.2,
+      "overrideHeight": true,
+      "use": "residential",
+      "facadeProfile": "riverfront-residential",
+      "heightMeaning": "published group range 42-43 floors; conservative 42-floor display estimate, exact per-tower count unverified",
+      "source": "https://www.prnasia.com/story/44290-1.shtml",
+      "publisher": "万达项目新闻稿·美通社",
+      "published": "2011-04-17"
+    },
+    {
+      "osmId": "osm-building-way-1018926856",
+      "expectedName": "",
+      "displayName": "积玉桥万达公馆住宅塔楼",
+      "storeys": 42,
+      "groupStoreysRange": [
+        42,
+        43
+      ],
+      "floorHeightEstimateM": 3.2,
+      "overrideHeight": true,
+      "use": "residential",
+      "facadeProfile": "riverfront-residential",
+      "heightMeaning": "published group range 42-43 floors; conservative 42-floor display estimate, exact per-tower count unverified",
+      "source": "https://www.prnasia.com/story/44290-1.shtml",
+      "publisher": "万达项目新闻稿·美通社",
+      "published": "2011-04-17"
+    },
+    {
+      "osmId": "osm-building-way-1100564308",
+      "expectedName": "",
+      "displayName": "沿江一号北侧办公楼",
+      "displayHeightM": 54,
+      "displayHeightRangeM": [
+        43.2,
+        65
+      ],
+      "use": "mixed-commercial-office",
+      "facadeProfile": "riverfront-office",
+      "heightMeaning": "photo-calibrated envelope estimate; not surveyed; does not raise the adjacent low retail wings",
+      "source": "https://swj.wuhan.gov.cn/tzdt/jcss/202109/t20210917_1779604.html",
+      "publisher": "武汉市水务局转载长江日报航拍照片",
+      "published": "2021-09-17"
+    },
+    {
+      "osmId": "osm-building-way-1100564309",
+      "expectedName": "",
+      "displayName": "沿江一号北侧办公楼",
+      "displayHeightM": 54,
+      "displayHeightRangeM": [
+        43.2,
+        65
+      ],
+      "use": "mixed-commercial-office",
+      "facadeProfile": "riverfront-office",
+      "heightMeaning": "photo-calibrated envelope estimate; not surveyed; does not raise the adjacent low retail wings",
+      "source": "https://swj.wuhan.gov.cn/tzdt/jcss/202109/t20210917_1779604.html",
+      "publisher": "武汉市水务局转载长江日报航拍照片",
+      "published": "2021-09-17"
+    },
+    {
+      "osmId": "osm-building-way-1094972949",
+      "expectedName": "",
+      "displayName": "世纪江尚住宅塔楼（楼号未逐栋对应）",
+      "totalHeightM": 174,
+      "storeys": 57,
+      "use": "residential",
+      "facadeProfile": "hankou-riverfront-residential",
+      "heightMeaning": "Documented group of nine 174m residential towers; matched to nine repeated 713m2 OSM tower footprints in the Century Jiangshang block. Individual numbered-tower identities unverified. Not a new survey.",
+      "identityEvidence": "Nine repeated star-shaped source footprints, block location and 2025 aerial context; low retail and villa footprints excluded.",
+      "source": "https://www.skyscrapercenter.com/complex/4279",
+      "publisher": "Council on Vertical Urbanism / CTBUH",
+      "supportingSources": [
+        "https://www.ckah.com/sites/default/files/2023-09/wf01-ckph-schi.pdf",
+        "https://news.hubeidaily.net/pc/c_4449922.html"
+      ]
+    },
+    {
+      "osmId": "osm-building-way-1094972950",
+      "expectedName": "",
+      "displayName": "世纪江尚住宅塔楼（楼号未逐栋对应）",
+      "totalHeightM": 174,
+      "storeys": 57,
+      "use": "residential",
+      "facadeProfile": "hankou-riverfront-residential",
+      "heightMeaning": "Documented group of nine 174m residential towers; matched to nine repeated 713m2 OSM tower footprints in the Century Jiangshang block. Individual numbered-tower identities unverified. Not a new survey.",
+      "identityEvidence": "Nine repeated star-shaped source footprints, block location and 2025 aerial context; low retail and villa footprints excluded.",
+      "source": "https://www.skyscrapercenter.com/complex/4279",
+      "publisher": "Council on Vertical Urbanism / CTBUH",
+      "supportingSources": [
+        "https://www.ckah.com/sites/default/files/2023-09/wf01-ckph-schi.pdf",
+        "https://news.hubeidaily.net/pc/c_4449922.html"
+      ]
+    },
+    {
+      "osmId": "osm-building-way-1094972951",
+      "expectedName": "",
+      "displayName": "世纪江尚住宅塔楼（楼号未逐栋对应）",
+      "totalHeightM": 174,
+      "storeys": 57,
+      "use": "residential",
+      "facadeProfile": "hankou-riverfront-residential",
+      "heightMeaning": "Documented group of nine 174m residential towers; matched to nine repeated 713m2 OSM tower footprints in the Century Jiangshang block. Individual numbered-tower identities unverified. Not a new survey.",
+      "identityEvidence": "Nine repeated star-shaped source footprints, block location and 2025 aerial context; low retail and villa footprints excluded.",
+      "source": "https://www.skyscrapercenter.com/complex/4279",
+      "publisher": "Council on Vertical Urbanism / CTBUH",
+      "supportingSources": [
+        "https://www.ckah.com/sites/default/files/2023-09/wf01-ckph-schi.pdf",
+        "https://news.hubeidaily.net/pc/c_4449922.html"
+      ]
+    },
+    {
+      "osmId": "osm-building-way-1094972953",
+      "expectedName": "",
+      "displayName": "世纪江尚住宅塔楼（楼号未逐栋对应）",
+      "totalHeightM": 174,
+      "storeys": 57,
+      "use": "residential",
+      "facadeProfile": "hankou-riverfront-residential",
+      "heightMeaning": "Documented group of nine 174m residential towers; matched to nine repeated 713m2 OSM tower footprints in the Century Jiangshang block. Individual numbered-tower identities unverified. Not a new survey.",
+      "identityEvidence": "Nine repeated star-shaped source footprints, block location and 2025 aerial context; low retail and villa footprints excluded.",
+      "source": "https://www.skyscrapercenter.com/complex/4279",
+      "publisher": "Council on Vertical Urbanism / CTBUH",
+      "supportingSources": [
+        "https://www.ckah.com/sites/default/files/2023-09/wf01-ckph-schi.pdf",
+        "https://news.hubeidaily.net/pc/c_4449922.html"
+      ]
+    },
+    {
+      "osmId": "osm-building-way-1094972954",
+      "expectedName": "",
+      "displayName": "世纪江尚住宅塔楼（楼号未逐栋对应）",
+      "totalHeightM": 174,
+      "storeys": 57,
+      "use": "residential",
+      "facadeProfile": "hankou-riverfront-residential",
+      "heightMeaning": "Documented group of nine 174m residential towers; matched to nine repeated 713m2 OSM tower footprints in the Century Jiangshang block. Individual numbered-tower identities unverified. Not a new survey.",
+      "identityEvidence": "Nine repeated star-shaped source footprints, block location and 2025 aerial context; low retail and villa footprints excluded.",
+      "source": "https://www.skyscrapercenter.com/complex/4279",
+      "publisher": "Council on Vertical Urbanism / CTBUH",
+      "supportingSources": [
+        "https://www.ckah.com/sites/default/files/2023-09/wf01-ckph-schi.pdf",
+        "https://news.hubeidaily.net/pc/c_4449922.html"
+      ]
+    },
+    {
+      "osmId": "osm-building-way-1094972958",
+      "expectedName": "",
+      "displayName": "世纪江尚住宅塔楼（楼号未逐栋对应）",
+      "totalHeightM": 174,
+      "storeys": 57,
+      "use": "residential",
+      "facadeProfile": "hankou-riverfront-residential",
+      "heightMeaning": "Documented group of nine 174m residential towers; matched to nine repeated 713m2 OSM tower footprints in the Century Jiangshang block. Individual numbered-tower identities unverified. Not a new survey.",
+      "identityEvidence": "Nine repeated star-shaped source footprints, block location and 2025 aerial context; low retail and villa footprints excluded.",
+      "source": "https://www.skyscrapercenter.com/complex/4279",
+      "publisher": "Council on Vertical Urbanism / CTBUH",
+      "supportingSources": [
+        "https://www.ckah.com/sites/default/files/2023-09/wf01-ckph-schi.pdf",
+        "https://news.hubeidaily.net/pc/c_4449922.html"
+      ]
+    },
+    {
+      "osmId": "osm-building-way-1094972959",
+      "expectedName": "",
+      "displayName": "世纪江尚住宅塔楼（楼号未逐栋对应）",
+      "totalHeightM": 174,
+      "storeys": 57,
+      "use": "residential",
+      "facadeProfile": "hankou-riverfront-residential",
+      "heightMeaning": "Documented group of nine 174m residential towers; matched to nine repeated 713m2 OSM tower footprints in the Century Jiangshang block. Individual numbered-tower identities unverified. Not a new survey.",
+      "identityEvidence": "Nine repeated star-shaped source footprints, block location and 2025 aerial context; low retail and villa footprints excluded.",
+      "source": "https://www.skyscrapercenter.com/complex/4279",
+      "publisher": "Council on Vertical Urbanism / CTBUH",
+      "supportingSources": [
+        "https://www.ckah.com/sites/default/files/2023-09/wf01-ckph-schi.pdf",
+        "https://news.hubeidaily.net/pc/c_4449922.html"
+      ]
+    },
+    {
+      "osmId": "osm-building-way-1094972960",
+      "expectedName": "",
+      "displayName": "世纪江尚住宅塔楼（楼号未逐栋对应）",
+      "totalHeightM": 174,
+      "storeys": 57,
+      "use": "residential",
+      "facadeProfile": "hankou-riverfront-residential",
+      "heightMeaning": "Documented group of nine 174m residential towers; matched to nine repeated 713m2 OSM tower footprints in the Century Jiangshang block. Individual numbered-tower identities unverified. Not a new survey.",
+      "identityEvidence": "Nine repeated star-shaped source footprints, block location and 2025 aerial context; low retail and villa footprints excluded.",
+      "source": "https://www.skyscrapercenter.com/complex/4279",
+      "publisher": "Council on Vertical Urbanism / CTBUH",
+      "supportingSources": [
+        "https://www.ckah.com/sites/default/files/2023-09/wf01-ckph-schi.pdf",
+        "https://news.hubeidaily.net/pc/c_4449922.html"
+      ]
+    },
+    {
+      "osmId": "osm-building-way-1094972961",
+      "expectedName": "",
+      "displayName": "世纪江尚住宅塔楼（楼号未逐栋对应）",
+      "totalHeightM": 174,
+      "storeys": 57,
+      "use": "residential",
+      "facadeProfile": "hankou-riverfront-residential",
+      "heightMeaning": "Documented group of nine 174m residential towers; matched to nine repeated 713m2 OSM tower footprints in the Century Jiangshang block. Individual numbered-tower identities unverified. Not a new survey.",
+      "identityEvidence": "Nine repeated star-shaped source footprints, block location and 2025 aerial context; low retail and villa footprints excluded.",
+      "source": "https://www.skyscrapercenter.com/complex/4279",
+      "publisher": "Council on Vertical Urbanism / CTBUH",
+      "supportingSources": [
+        "https://www.ckah.com/sites/default/files/2023-09/wf01-ckph-schi.pdf",
+        "https://news.hubeidaily.net/pc/c_4449922.html"
+      ]
+    },
+    {
+      "osmId": "osm-building-way-1013447170",
+      "expectedName": "武汉恒隆广场办公楼",
+      "displayName": "武汉恒隆广场办公楼",
+      "totalHeightM": 320.7,
+      "use": "mixed-commercial-office",
+      "facadeProfile": "riverfront-office",
+      "heightMeaning": "Completed architectural height per current CVU record. Earlier planning articles state 339m, Aedas award submission states 325m. Selected completed-building database value, not occupied-floor height.",
+      "source": "https://www.skyscrapercenter.com/wuhan/heartland-66-office-tower/16900",
+      "publisher": "Council on Vertical Urbanism / CTBUH",
+      "heightAlternatives": [
+        {
+          "heightM": 339,
+          "meaning": "2018 planning report",
+          "source": "https://fgw.wuhan.gov.cn/xwzx/fgyw/202001/t20200116_864418.html"
+        },
+        {
+          "heightM": 325,
+          "meaning": "Aedas award submission",
+          "source": "https://architectureprize.com/winners/winner.php?id=4658"
+        }
+      ]
+    },
+    {
+      "osmId": "osm-building-relation-14117454",
+      "expectedName": "武汉长江航运中心",
+      "displayName": "武汉长江航运中心",
+      "totalHeightM": 330,
+      "use": "mixed-commercial-office",
+      "facadeProfile": "riverfront-office",
+      "heightMeaning": "Retain OSM 330m, corroborated by completed CVU record. Government topping-out reports give 336m and designer gives 331m. Podium metric height and crown shape are visual estimates.",
+      "source": "https://www.skyscrapercenter.com/building/wuhan-yangtze-river-shipping-center/12461",
+      "publisher": "Council on Vertical Urbanism / CTBUH",
+      "supportingSources": [
+        "https://design.citic/portal/article/index/id/2598/cid/31.html",
+        "https://www.wuhan.gov.cn/zwgk/xxgk/zdjsxm/ssqk/202011/t20201102_1490045.shtml",
+        "https://news.hubeidaily.net/pc/c_4449922.html"
+      ],
+      "podiumHeightM": 22.5,
+      "podiumStoreys": 5,
+      "massingMembers": [
+        {
+          "sourceId": "osm-way-943192870",
+          "ringsLocal": [
+            [
+              [
+                -395.67,
+                1198.245
+              ],
+              [
+                -355.011,
+                1216.493
+              ],
+              [
+                -343.559,
+                1220.972
+              ],
+              [
+                -332.011,
+                1224.763
+              ],
+              [
+                -320.587,
+                1224.464
+              ],
+              [
+                -310.862,
+                1217.635
+              ],
+              [
+                -286.307,
+                1163.944
+              ],
+              [
+                -279.497,
+                1115.331
+              ],
+              [
+                -338.284,
+                1086.451
+              ],
+              [
+                -395.67,
+                1198.245
+              ]
+            ]
+          ],
+          "role": "tower",
+          "baseY": 22.5,
+          "bodyTopM": 294,
+          "crownTopM": 330,
+          "crownSteps": 9,
+          "heightMeaning": "Tower/podium assignment from reviewed OSM member geometry and 2025 aerial; body/crown split and 9-step gabled roof are visual estimates.",
+          "crownRidgeAxis": "short"
+        }
+      ],
+      "massingNote": "Relation comprises ways 943192870 and 1058265256. Only the reviewed southern tower member rises above the podium. Member role and crown proportions estimated from aerial; these ways are not source building:part tags."
+    },
+    {
+      "osmId": "osm-building-way-533413541",
+      "expectedName": "武汉绿地中心",
+      "totalHeightM": 475.6,
+      "use": "mixed-commercial-office",
+      "facadeProfile": "riverfront-office",
+      "heightMeaning": "Completed architectural height; replaces rounded OSM 476m, not an occupied-floor elevation.",
+      "source": "https://www.skyscrapercenter.com/city/wuhan",
+      "publisher": "CVU / CTBUH"
+    },
+    {
+      "osmId": "osm-building-way-1315252655",
+      "expectedName": "武汉长江中心",
+      "totalHeightM": 400,
+      "use": "mixed-commercial-office",
+      "facadeProfile": "riverfront-office",
+      "heightMeaning": "Current CVU architectural total for structurally topped-out Great River Center; 2021 official construction report gives 386.3m. Not a surveyed completed height.",
+      "source": "https://www.skyscrapercenter.com/building/great-river-center/39970",
+      "publisher": "CVU / CTBUH",
+      "constructionStatus": "structurally-topped-out",
+      "supportingSources": [
+        "https://www.wuhan.gov.cn/zwgk/xxgk/zdjsxm/ssqk/202102/t20210218_1635905.shtml"
+      ]
+    },
+    {
+      "osmId": "osm-building-way-761608465",
+      "expectedName": "武汉万达中心",
+      "totalHeightM": 180,
+      "use": "mixed-commercial-office",
+      "facadeProfile": "riverfront-office",
+      "heightMeaning": "Approximate office tower height explicitly published by project developer in 2011; other listings give 188m. Display adopts documented approximate 180m pending completed-height reconciliation.",
+      "source": "https://www.prnasia.com/story/44290-1.shtml",
+      "publisher": "武汉万达公馆开发方新闻稿",
+      "heightApproximate": true
+    },
+    {
+      "osmId": "osm-building-relation-13567167",
+      "expectedName": "武汉恒隆广场",
+      "storeys": 6,
+      "floorHeightEstimateM": 5,
+      "overrideHeight": true,
+      "use": "retail",
+      "heightMeaning": "Aedas describes a six-storey retail mall. Display metric height uses estimated 5m commercial storeys; office tower remains a separate footprint.",
+      "source": "https://architectureprize.com/winners/winner.php?id=4658",
+      "publisher": "Aedas project award submission"
+    }
+  ]
+}

@@ -1,0 +1,408 @@
+{
+  "version": 1,
+  "scope": "Existing mapped Hankou heritage buildings only. No area-wide style replacement.",
+  "materials": "Procedural local stone and brick textures; photos are references, not texture assets.",
+  "buildings": [
+    {
+      "osmId": "osm-building-way-128400520",
+      "expectedName": "台湾银行汉口分行旧址",
+      "label": "台湾银行旧址",
+      "template": "taiwan-bank",
+      "floors": 4,
+      "frontHint": [
+        0.7,
+        -0.71
+      ],
+      "source": "https://www.jianghan.gov.cn/mljh/zsyz/zsdt/201903/t20190301_3719.shtml",
+      "detailConfidence": "typology-reference;ornament-dimensions-estimated",
+      "columns": 8,
+      "heightCorrection": {
+        "heightM": 23,
+        "rangeM": [
+          20,
+          26
+        ],
+        "documented": false,
+        "source": "https://www.jianghan.gov.cn/mljh/zsyz/zsdt/201903/t20190301_3719.shtml",
+        "meaning": "Photo-envelope estimate including parapet/cupola; not a surveyed architectural height"
+      },
+      "photo": "https://www.jianghan.gov.cn/mljh/zsyz/zsdt/201903/W020190301826863781869.jpg",
+      "parapet": "balustrade"
+    },
+    {
+      "osmId": "osm-building-way-767972188",
+      "expectedName": "汉口汇丰银行大楼旧址",
+      "label": "汇丰银行旧址",
+      "template": "hsbc-bank",
+      "floors": 3,
+      "frontHint": [
+        0.9,
+        0.44
+      ],
+      "source": "https://www.whcbs.com/Upload/BookReadFile/202004/8bcbb02411c04eb6b90f150e861056bb.pdf",
+      "detailConfidence": "typology-reference;ornament-dimensions-estimated",
+      "columns": 10,
+      "heightCorrection": {
+        "heightM": 24,
+        "rangeM": [
+          21,
+          27
+        ],
+        "documented": false,
+        "source": "https://www.whcbs.com/Upload/BookReadFile/202004/8bcbb02411c04eb6b90f150e861056bb.pdf",
+        "meaning": "Photo-envelope estimate including parapet/cupola; not a surveyed architectural height"
+      },
+      "photo": "https://commons.wikimedia.org/wiki/File:20240622_Former_HSBC_Building,_Hankou_01.jpg"
+    },
+    {
+      "osmId": "osm-building-way-767972189",
+      "expectedName": "汉口花旗银行大楼旧址",
+      "label": "花旗银行旧址",
+      "template": "citibank",
+      "floors": 5,
+      "frontHint": [
+        0.9,
+        0.44
+      ],
+      "source": "https://www.whcbs.com/Upload/BookReadFile/202004/8bcbb02411c04eb6b90f150e861056bb.pdf",
+      "detailConfidence": "typology-reference;ornament-dimensions-estimated",
+      "columns": 8,
+      "heightCorrection": {
+        "heightM": 29.5,
+        "documented": true,
+        "source": "https://www.whcbs.com/Upload/BookReadFile/202004/8bcbb02411c04eb6b90f150e861056bb.pdf",
+        "meaning": "Published total height; replaces conflicting OSM 20m tag, ornament dimensions remain estimated"
+      },
+      "photo": "https://commons.wikimedia.org/wiki/File:20240622_Former_Site_of_The_National_City_Bank_of_New_York,_Hankow_Branch.jpg",
+      "parapet": "balustrade"
+    },
+    {
+      "osmId": "osm-building-way-767972190",
+      "expectedName": "日清洋行汉口分行旧址",
+      "label": "日清洋行旧址",
+      "template": "corner-cupola",
+      "floors": 5,
+      "frontHint": [
+        0.9,
+        0.44
+      ],
+      "source": "https://www.jianghan.gov.cn/mljh/zsyz/zsdt/201903/t20190301_3719.shtml",
+      "detailConfidence": "typology-reference;ornament-dimensions-estimated",
+      "columns": 4,
+      "heightCorrection": {
+        "heightM": 32,
+        "rangeM": [
+          28,
+          35
+        ],
+        "documented": false,
+        "source": "https://www.jianghan.gov.cn/mljh/zsyz/zsdt/201903/t20190301_3719.shtml",
+        "meaning": "Photo-envelope estimate including parapet/cupola; not a surveyed architectural height"
+      },
+      "photo": "https://commons.wikimedia.org/wiki/File:20240519-汉口日清洋行大楼-正面.jpg"
+    },
+    {
+      "osmId": "osm-building-way-981847959",
+      "expectedName": "日信洋行旧址",
+      "label": "日信洋行旧址",
+      "template": "classical-commercial",
+      "floors": 5,
+      "frontHint": [
+        -0.7,
+        0.71
+      ],
+      "source": "https://www.whda.org.cn/dawh/whjy/202512/t20251223_2699331.shtml",
+      "detailConfidence": "typology-reference;ornament-dimensions-estimated",
+      "balconyDetail": {
+        "kind": "risshin-central-bays",
+        "source": "https://www.whcbs.com/Upload/BookReadFile/202002/815f04fc613b45f399c1d43f7777afc5/ops/chapter037.html",
+        "meaning": "Five-storey Renaissance facade, central curved balconies and upper continuous balcony; dimensions estimated, projection limited to 0.38 m"
+      },
+      "heightCorrection": {
+        "heightM": 22,
+        "rangeM": [
+          20,
+          24
+        ],
+        "documented": false,
+        "source": "https://www.whcbs.com/Upload/BookReadFile/202002/815f04fc613b45f399c1d43f7777afc5/ops/chapter037.html",
+        "meaning": "Five historic commercial storeys with a taller ground floor and parapet; illustrative 22m envelope, not measured. Retains source OSM floor count."
+      }
+    },
+    {
+      "osmId": "osm-building-way-128400523",
+      "expectedName": "四明银行汉口分行旧址",
+      "label": "四明银行旧址",
+      "template": "restrained-deco",
+      "floors": 7,
+      "frontHint": [
+        0.7,
+        -0.71
+      ],
+      "source": "https://www.jianghan.gov.cn/mljh/zsyz/zsdt/201903/t20190301_3719.shtml",
+      "detailConfidence": "typology-reference;ornament-dimensions-estimated",
+      "heightCorrection": {
+        "heightM": 31,
+        "rangeM": [
+          28,
+          35
+        ],
+        "documented": false,
+        "source": "https://www.jianghan.gov.cn/mljh/zsyz/zsdt/201903/t20190301_3719.shtml",
+        "meaning": "Photo-envelope estimate including parapet/cupola; not a surveyed architectural height"
+      },
+      "photo": "https://www.jianghan.gov.cn/mljh/zsyz/zsdt/201903/W020190301826863787036.jpg"
+    },
+    {
+      "osmId": "osm-building-way-981847960",
+      "expectedName": "TSUTAYA Book Sote （永利银行旧址）",
+      "label": "永利银行旧址",
+      "template": "modern-bank",
+      "floors": 5,
+      "frontHint": [
+        -0.7,
+        0.71
+      ],
+      "source": "https://www.whda.org.cn/dawh/whjy/202512/t20251223_2699331.shtml",
+      "detailConfidence": "typology-reference;ornament-dimensions-estimated"
+    },
+    {
+      "osmId": "osm-building-way-1289238581",
+      "expectedName": "中国实业银行大楼旧址",
+      "label": "中国实业银行旧址",
+      "template": "modern-bank",
+      "floors": 6,
+      "frontHint": [
+        -0.7,
+        0.71
+      ],
+      "source": "https://www.whda.org.cn/dawh/whjy/202512/t20251223_2699331.shtml",
+      "detailConfidence": "typology-reference;ornament-dimensions-estimated"
+    },
+    {
+      "osmId": "osm-building-way-1289238583",
+      "expectedName": "中国银行",
+      "label": "中国银行旧址",
+      "template": "classical-commercial",
+      "floors": 4,
+      "frontHint": [
+        0.7,
+        -0.71
+      ],
+      "source": "https://www.whda.org.cn/dawh/whjy/202512/t20251223_2699331.shtml",
+      "detailConfidence": "typology-reference;ornament-dimensions-estimated"
+    },
+    {
+      "osmId": "osm-building-way-1314771294",
+      "expectedName": "浙江兴业银行大楼",
+      "label": "浙江兴业银行旧址",
+      "template": "classical-commercial",
+      "floors": 4,
+      "frontHint": [
+        -0.7,
+        0.71
+      ],
+      "source": "https://www.whda.org.cn/dawh/whjy/202512/t20251223_2699331.shtml",
+      "detailConfidence": "typology-reference;ornament-dimensions-estimated"
+    },
+    {
+      "osmId": "osm-building-way-1323368292",
+      "expectedName": "上海银行汉口分行旧址",
+      "label": "上海银行旧址",
+      "template": "classical-commercial",
+      "floors": 4,
+      "frontHint": [
+        -0.7,
+        0.71
+      ],
+      "source": "https://www.whda.org.cn/dawh/whjy/202512/t20251223_2699331.shtml",
+      "detailConfidence": "typology-reference;ornament-dimensions-estimated"
+    },
+    {
+      "osmId": "osm-building-way-1094546679",
+      "expectedName": "汉口横滨正金银行大楼",
+      "label": "横滨正金银行旧址",
+      "template": "classical-commercial",
+      "floors": 4,
+      "frontHint": [
+        0.9,
+        0.44
+      ],
+      "source": "https://www.whzx.gov.cn/zxzl/wsl/whwszl/202405/P020240507544829602192.pdf",
+      "detailConfidence": "typology-reference;ornament-dimensions-estimated"
+    },
+    {
+      "osmId": "osm-building-way-789936193",
+      "expectedName": "交通银行大楼",
+      "label": "交通银行旧址",
+      "template": "colonnaded-bank",
+      "floors": 4,
+      "frontHint": [
+        -0.7,
+        0.71
+      ],
+      "source": "https://www.whcbs.com/Upload/BookReadFile/202002/815f04fc613b45f399c1d43f7777afc5/ops/chapter015.html",
+      "detailConfidence": "typology-reference;facade-and-ornament-dimensions-estimated",
+      "columns": 6
+    },
+    {
+      "osmId": "osm-building-way-789936213",
+      "expectedName": "武汉市少儿图书馆",
+      "label": "汉口商业银行旧址（少儿图书馆）",
+      "template": "classical-commercial",
+      "floors": 4,
+      "frontHint": [
+        0.7,
+        -0.71
+      ],
+      "source": "https://www.dxh.gov.cn/YXLKG_16692/wszl/202305/P020250508258021618616.pdf",
+      "detailConfidence": "typology-reference;facade-and-ornament-dimensions-estimated"
+    },
+    {
+      "osmId": "osm-building-way-1314771285",
+      "expectedName": "璇宫饭店（中心百货）",
+      "label": "璇宫饭店旧址",
+      "template": "restrained-deco",
+      "floors": 6,
+      "frontHint": [
+        0.7,
+        -0.71
+      ],
+      "source": "https://design.citic/portal/article/index/id/2629/cid/27.html",
+      "detailConfidence": "typology-reference;facade-and-ornament-dimensions-estimated",
+      "heightCorrection": {
+        "heightM": 28.4,
+        "documented": true,
+        "source": "https://design.citic/portal/article/index/id/2629/cid/27.html",
+        "meaning": "Architect renovation project records six-storey main building height; roof ornament remains approximate"
+      }
+    },
+    {
+      "osmId": "osm-building-way-1091893007",
+      "expectedName": "汉口华俄道胜银行旧址",
+      "label": "华俄道胜银行旧址",
+      "template": "classical-commercial",
+      "floors": 4,
+      "frontHint": [
+        0.9,
+        0.44
+      ],
+      "source": "https://www.whcbs.com/Upload/BookReadFile/202002/815f04fc613b45f399c1d43f7777afc5/ops/chapter010.html",
+      "detailConfidence": "typology-reference;facade-and-ornament-dimensions-estimated"
+    },
+    {
+      "osmId": "osm-building-way-1091893008",
+      "expectedName": "汉口新泰大楼旧址",
+      "label": "新泰大楼旧址",
+      "template": "classical-commercial",
+      "floors": 6,
+      "frontHint": [
+        0.9,
+        0.44
+      ],
+      "source": "https://www.digitalwuhan.net/UploadFileNew/20200812054000551.pdf",
+      "detailConfidence": "typology-reference;facade-and-ornament-dimensions-estimated"
+    },
+    {
+      "osmId": "osm-building-way-1092815752",
+      "expectedName": "汉口景明大楼旧址",
+      "label": "景明大楼旧址",
+      "template": "modern-bank",
+      "floors": 6,
+      "frontHint": [
+        0.7,
+        -0.71
+      ],
+      "source": "https://www.whcbs.com/Upload/BookReadFile/202002/815f04fc613b45f399c1d43f7777afc5/ops/chapter045.html",
+      "detailConfidence": "typology-reference;facade-and-ornament-dimensions-estimated"
+    },
+    {
+      "osmId": "osm-building-way-767972191",
+      "expectedName": "巴诺夫公馆（小巴公）",
+      "label": "小巴公房子",
+      "template": "brick-commercial",
+      "floors": 4,
+      "frontHint": [
+        0.7,
+        -0.71
+      ],
+      "source": "https://www.wuhan.gov.cn/sy/whyw/202205/t20220525_1976737.shtml",
+      "detailConfidence": "typology-reference;facade-and-ornament-dimensions-estimated",
+      "roofDetail": {
+        "kind": "onion-pavilion",
+        "reserveM": 3.4,
+        "radiusM": 2.1,
+        "slopeWidthM": 1.9,
+        "slopeFraction": 0.5,
+        "anchorHint": [
+          175,
+          -445
+        ],
+        "source": "https://www.wuhan.gov.cn/sy/whyw/202205/t20220525_1976737.shtml"
+      }
+    },
+    {
+      "osmId": "osm-building-way-1314323878",
+      "expectedName": "巴诺夫公馆（大巴公）",
+      "label": "大巴公房子",
+      "template": "brick-commercial",
+      "floors": 4,
+      "frontHint": [
+        0.7,
+        -0.71
+      ],
+      "source": "https://www.wuhan.gov.cn/sy/whyw/202205/t20220525_1976737.shtml",
+      "detailConfidence": "typology-reference;facade-and-ornament-dimensions-estimated",
+      "roofDetail": {
+        "kind": "onion-pavilion",
+        "reserveM": 3.4,
+        "radiusM": 2.3,
+        "slopeWidthM": 2.2,
+        "slopeFraction": 0.52,
+        "anchorHint": [
+          120,
+          -351
+        ],
+        "source": "https://wlt.hubei.gov.cn/bmdt/mtjj/202609/t20260916_6015370.shtml"
+      }
+    },
+    {
+      "osmId": "osm-building-way-770782892",
+      "expectedName": "美国领事馆旧址",
+      "label": "美国领事馆旧址",
+      "template": "brick-commercial",
+      "floors": 3,
+      "frontHint": [
+        0.9,
+        0.44
+      ],
+      "source": "https://www.whcbs.com/Upload/BookReadFile/202002/815f04fc613b45f399c1d43f7777afc5/ops/chapter086.html",
+      "detailConfidence": "typology-reference;facade-and-ornament-dimensions-estimated",
+      "roofDetail": {
+        "kind": "octagonal-belvedere",
+        "reserveM": 4.2,
+        "radiusM": 2.8,
+        "slopeWidthM": 1.5,
+        "slopeFraction": 0.18,
+        "anchorHint": [
+          477,
+          -663
+        ],
+        "source": "https://www.whzx.gov.cn/zxzl/wsl/whwszl/202307/P020240126551516139360.pdf"
+      }
+    },
+    {
+      "osmId": "osm-building-way-1095192364",
+      "expectedName": "俄国领事馆旧址",
+      "label": "俄国领事馆旧址",
+      "template": "classical-commercial",
+      "floors": 4,
+      "frontHint": [
+        0.9,
+        0.44
+      ],
+      "source": "https://www.whda.org.cn/dawh/whjy/202512/t20251223_2699332.shtml",
+      "detailConfidence": "typology-reference;facade-and-ornament-dimensions-estimated"
+    }
+  ]
+}
