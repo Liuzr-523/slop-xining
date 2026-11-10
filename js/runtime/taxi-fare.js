@@ -45,8 +45,12 @@ export function createTaxiService(scene,{controllers,getMap,goToStand}){
  let passengerPlaced=false,passengerPosition=null,lastPhase='idle',lastRevision=-1,refresh=0,routeRemaining=0,offRoute=false,lastNav=null;
 
  const panel=document.createElement('section');panel.id='taxi-service';panel.setAttribute('aria-label','出租车接送任务');
- panel.innerHTML=`<header><h2>出租车接送</h2><span id="taxi-shift">当班 ¥0.0 · 0单</span></header><p id="taxi-status" role="status" aria-live="polite">自由漫游，随时接单</p><h3 id="taxi-place">西宁随机接送</h3><p id="taxi-detail">海湖新区 · 按实际道路导航</p><div id="taxi-hold" hidden><span></span></div><div id="taxi-actions"><button id="taxi-primary" type="button">开始接单 <kbd>T</kbd></button><button id="taxi-secondary" type="button" hidden>取消本单</button><button id="taxi-stand" type="button" hidden>前往附近候客路段</button></div>`;
+ panel.innerHTML=`<header><h2>出租车接送</h2><span id="taxi-shift">当班 ¥0.0 · 0单</span><button id="taxi-fold" type="button" aria-expanded="true" aria-label="折叠接单面板">▾</button></header><p id="taxi-status" role="status" aria-live="polite">自由漫游，随时接单</p><h3 id="taxi-place">西宁随机接送</h3><p id="taxi-detail">海湖新区 · 按实际道路导航</p><div id="taxi-hold" hidden><span></span></div><div id="taxi-actions"><button id="taxi-primary" type="button">开始接单 <kbd>T</kbd></button><button id="taxi-secondary" type="button" hidden>取消本单</button><button id="taxi-stand" type="button" hidden>前往附近候客路段</button></div>`;
  document.body.append(panel);
+ const fold=panel.querySelector('#taxi-fold');
+ const KEY='xining-taxi-folded';let folded;try{const v=localStorage.getItem(KEY);folded=v===null?matchMedia('(max-width:800px)').matches:v==='1';}catch(e){folded=matchMedia('(max-width:800px)').matches;}
+ function applyFold(){panel.classList.toggle('is-folded',folded);fold.setAttribute('aria-expanded',String(!folded));fold.textContent=folded?'▸':'▾';fold.setAttribute('aria-label',folded?'展开接单面板':'折叠接单面板');}
+ fold.addEventListener('click',()=>{folded=!folded;applyFold();try{localStorage.setItem(KEY,folded?'1':'0');}catch(e){}});applyFold();
  const status=panel.querySelector('#taxi-status'),place=panel.querySelector('#taxi-place'),detail=panel.querySelector('#taxi-detail'),primary=panel.querySelector('#taxi-primary'),secondary=panel.querySelector('#taxi-secondary'),stand=panel.querySelector('#taxi-stand'),hold=panel.querySelector('#taxi-hold');
  let needsStand=false,standStop=null;
  function offer(){

@@ -20,3 +20,10 @@
 #taxi-hold span{display:block;background:#ffc61a;height:100%;transform-origin:left;transform:scaleX(0)}
 #taxi-service::selection,#taxi-service ::selection{background:#ffc61a;color:#181916}
 @media(max-width:800px){#taxi-service{left:12px;top:138px;width:300px;max-width:calc(100vw - 24px);padding:12px;font-size:13px}#taxi-service header{margin-bottom:10px}#taxi-service h3{font-size:17px}#taxi-detail{margin-bottom:10px}}
+
+#taxi-service #taxi-fold{min-height:32px;width:32px;padding:0;flex:none;background:#353b3e;color:#f6f4e9;border-radius:8px;font-size:15px;line-height:1}
+#taxi-service.is-folded{width:auto;padding:8px 10px}
+#taxi-service.is-folded header{margin-bottom:0}
+#taxi-service.is-folded>:not(header){display:none!important}
+#taxi-service.is-folded #taxi-shift{font-size:12px}
+@media(max-width:800px){#taxi-service.is-folded{max-width:calc(100vw - 24px)}}
