@@ -136,6 +136,11 @@ def main():
         conflict=unary_union([road_lines[int(j)].buffer(min(roads[int(j)]['width']/2,3)) for j in road_tree.query(poly.buffer(16))])
         overlap=poly.intersection(conflict).area/poly.area if not conflict.is_empty else 0
         if overlap>.35 and not open_building(item):excluded['source_footprint_road_conflict']+=1;return
+        if XN and not open_building(item):
+            carway=unary_union([road_lines[int(j)].buffer(roads[int(j)]['width']/2,quad_segs=3) for j in road_tree.query(poly.buffer(30)) if roads[int(j)]['mode']=='car' and not roads[int(j)].get('bridge') and not roads[int(j)].get('tunnel')])
+            if not carway.is_empty:
+                cov=poly.intersection(carway).area
+                if cov>40 or cov>poly.area*.08:excluded['building_on_carriageway']+=1;return
         rr=poly.minimum_rotated_rectangle;q=list(rr.exterior.coords)
         w=math.dist(q[0],q[1]);d=math.dist(q[1],q[2]);x,z=rr.centroid.x,rr.centroid.y
         if min(w,d)<2:excluded['building_dimensions']+=1;return
